@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/mqtt/publish/{topic}/{message}', 'MqttExampleController@SendMsgViaMqtt');
