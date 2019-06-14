@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/mqtt/publish/{topic}/{message}', 'MqttExampleController@SendMsgViaMqtt');
+Route::get('/mqtt/publish/{topic}', 'MqttExampleController@SubscribetoTopic');

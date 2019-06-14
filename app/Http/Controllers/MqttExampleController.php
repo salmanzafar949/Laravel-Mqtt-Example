@@ -21,4 +21,15 @@ class MqttExampleController extends Controller
 
         return false;
     }
+
+    //subscribing topic
+
+    public function SubscribetoTopic($topic)
+    {
+        Mqtt::ConnectAndSubscribe($topic, function($topic, $msg){
+            echo "Msg Received: \n";
+            echo "Topic: {$topic}\n\n";
+            echo "\t$msg\n\n";
+        });
+    }
 }
